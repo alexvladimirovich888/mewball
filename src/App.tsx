@@ -52,8 +52,8 @@ export default function App() {
           referrerPolicy="no-referrer"
           onError={(e) => {
             const img = e.currentTarget;
-            if (img.src !== "https://i.postimg.cc/8CDXvQZg/Gemini-Generated-Image-thy6crthy6crthy6.png") {
-              img.src = "https://i.postimg.cc/8CDXvQZg/Gemini-Generated-Image-thy6crthy6crthy6.png";
+            if (img.src !== "https://i.postimg.cc/wxmWwQ3F/Gemini-Generated-Image-thy6crthy6crthy6-(1).png") {
+              img.src = "https://i.postimg.cc/wxmWwQ3F/Gemini-Generated-Image-thy6crthy6crthy6-(1).png";
             }
           }}
           className="w-64 sm:w-80 md:w-[26rem] lg:w-[32rem] xl:w-[36rem] h-auto object-contain mix-blend-multiply transition-all duration-300 transform -translate-x-2 translate-y-2"
