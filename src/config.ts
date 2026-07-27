@@ -1,7 +1,7 @@
 import { ProjectConfig } from "./types";
 
 export const CONFIG: ProjectConfig = {
-  TOKEN_MINT: "EX15x3F5WWwjAtyM6ftDJBY9RDZTe8rQxouoLbWRrekt", // $CATBALL Token CA
+  TOKEN_MINT: "Gx3iGhFX33cPZEGATG7qvtSH9ntLbKa8hhqj9UKTpump", // $CATBALL Token CA
   DISTRIBUTOR_WALLET: "", // Wallet distributing tokens
   HELIUS_RPC_URL: "https://mainnet.helius-rpc.com/?api-key=4a6728d2-443d-4628-a377-b0e25c32d7b9",
   DEXSCREENER_API: "https://api.dexscreener.com/latest/dex/tokens/"

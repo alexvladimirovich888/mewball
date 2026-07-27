@@ -33,7 +33,7 @@ app.get("/api/health", (_req, res) => {
 // 2. Project config route
 app.get("/api/config", (_req, res) => {
   res.json({
-    TOKEN_MINT: process.env.TOKEN_MINT || "EX15x3F5WWwjAtyM6ftDJBY9RDZTe8rQxouoLbWRrekt",
+    TOKEN_MINT: process.env.TOKEN_MINT || "Gx3iGhFX33cPZEGATG7qvtSH9ntLbKa8hhqj9UKTpump",
     DISTRIBUTOR_WALLET: process.env.DISTRIBUTOR_WALLET || "",
     HELIUS_RPC_URL: HELIUS_URL,
     DEXSCREENER_API: "https://api.dexscreener.com/latest/dex/tokens/"
