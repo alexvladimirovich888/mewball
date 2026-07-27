@@ -46,9 +46,8 @@ export default function App() {
       {/* Cat Illustration - Bottom Left Corner */}
       <div className="fixed bottom-0 left-0 z-20 pointer-events-none p-0 sm:p-1 md:p-2">
         <img 
-          src="https://i.postimg.cc/8CDXvQZg/Gemini-Generated-Image-thy6crthy6crthy6.png" 
+          src="/bottom_left_cat.png" 
           alt="Cat Character" 
-          referrerPolicy="no-referrer"
           className="w-64 sm:w-80 md:w-[26rem] lg:w-[32rem] xl:w-[36rem] h-auto object-contain mix-blend-multiply transition-all duration-300 transform -translate-x-2 translate-y-2"
         />
       </div>
