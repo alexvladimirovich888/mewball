@@ -7,7 +7,6 @@ import { AirdropFeed } from "./components/AirdropFeed";
 import { PnLChecker } from "./components/PnLChecker";
 import { Footer } from "./components/Footer";
 import { playMeowSound } from "./services/meowSound";
-import catImage from "./assets/images/bottom_left_cat.png";
 
 export default function App() {
   const [tokenMint, setTokenMint] = useState<string>(CONFIG.TOKEN_MINT || "");
@@ -43,22 +42,6 @@ export default function App() {
 
   return (
     <div className="h-screen w-screen overflow-hidden bg-white text-slate-900 font-sans selection:bg-amber-400 selection:text-slate-950 relative flex flex-col p-2 sm:p-4 gap-3">
-
-      {/* Cat Illustration - Bottom Left Corner */}
-      <div className="fixed bottom-0 left-0 z-20 pointer-events-none p-0 sm:p-1 md:p-2">
-        <img 
-          src={catImage} 
-          alt="" 
-          referrerPolicy="no-referrer"
-          onError={(e) => {
-            const img = e.currentTarget;
-            if (img.src !== "https://i.postimg.cc/LXnmc0GB/Gemini-Generated-Image-thy6crthy6crthy6-(2).png") {
-              img.src = "https://i.postimg.cc/LXnmc0GB/Gemini-Generated-Image-thy6crthy6crthy6-(2).png";
-            }
-          }}
-          className="w-64 sm:w-80 md:w-[26rem] lg:w-[32rem] xl:w-[36rem] h-auto object-contain mix-blend-multiply transition-all duration-300 transform -translate-x-2 translate-y-2"
-        />
-      </div>
 
       <div className="relative z-10 flex flex-col h-full w-full max-w-7xl mx-auto gap-3">
         {/* Header */}
