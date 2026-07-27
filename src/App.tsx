@@ -43,12 +43,13 @@ export default function App() {
   return (
     <div className="h-screen w-screen overflow-hidden bg-white text-slate-900 font-sans selection:bg-amber-400 selection:text-slate-950 relative flex flex-col p-2 sm:p-4 gap-3">
 
-      {/* Cat Tangled Yarn Illustration - Bottom Left Corner */}
-      <div className="fixed bottom-0 left-0 z-20 pointer-events-none p-1 sm:p-2 md:p-3">
+      {/* Cat Illustration - Bottom Left Corner */}
+      <div className="fixed bottom-0 left-0 z-20 pointer-events-none p-0 sm:p-1 md:p-2">
         <img 
-          src="/cat_tangled_yarn.jpg" 
-          alt="Cat Tangled in Yarn" 
-          className="w-48 sm:w-64 md:w-80 lg:w-96 h-auto object-contain mix-blend-multiply opacity-95 transition-all duration-300 transform -translate-x-2 translate-y-2"
+          src="https://i.postimg.cc/8CDXvQZg/Gemini-Generated-Image-thy6crthy6crthy6.png" 
+          alt="Cat Character" 
+          referrerPolicy="no-referrer"
+          className="w-64 sm:w-80 md:w-[26rem] lg:w-[32rem] xl:w-[36rem] h-auto object-contain mix-blend-multiply transition-all duration-300 transform -translate-x-2 translate-y-2"
         />
       </div>
 
