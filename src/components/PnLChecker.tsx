@@ -158,13 +158,17 @@ export const PnLChecker: React.FC<PnLCheckerProps> = ({ connectedWallet }) => {
             <div className="text-left">
               <p className="text-[9px] font-bold uppercase text-slate-400">Verified PnL</p>
               <p className={`text-sm font-black font-mono ${result.isRekt ? "text-[#E84393]" : "text-[#00CEC9]"}`}>
-                {(result?.verifiedPnL ?? 0) < 0 ? `-$${Math.abs(result?.verifiedPnL ?? 0).toLocaleString()}` : "$0.00"}
+                {(() => {
+                  const val = result?.verifiedPnL ?? 0;
+                  const num = isNaN(Number(val)) ? 0 : Number(val);
+                  return num < 0 ? `-$${Math.abs(num).toLocaleString('en-US')}` : "$0.00";
+                })()}
               </p>
             </div>
 
             <div className="text-left">
               <p className="text-[9px] font-bold uppercase text-slate-400">Rekt Score</p>
-              <p className="text-sm font-black text-neon-gradient font-mono">{result.rektScore}/100</p>
+              <p className="text-sm font-black text-neon-gradient font-mono">{result.rektScore || 0}/100</p>
             </div>
 
             <div className="text-left">
@@ -175,7 +179,11 @@ export const PnLChecker: React.FC<PnLCheckerProps> = ({ connectedWallet }) => {
             <div className="text-left">
               <p className="text-[9px] font-bold uppercase text-slate-400">Catball Supply</p>
               <p className="text-sm font-black text-neon-gradient font-mono">
-                +{((result?.eligibleCatballAmount ?? result?.eligibleFomoballAmount) ?? 0).toLocaleString()}
+                +{(() => {
+                  const val = (result?.eligibleCatballAmount ?? result?.eligibleFomoballAmount) ?? 0;
+                  const num = isNaN(Number(val)) ? 0 : Number(val);
+                  return Math.round(num).toLocaleString('en-US');
+                })()}
               </p>
             </div>
           </div>

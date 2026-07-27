@@ -101,7 +101,7 @@ export const TokenomicsBuyback: React.FC = () => {
               <div className="space-y-2">
                 <div className="flex justify-between text-xs font-mono">
                   <span className="text-slate-400">Simulated 24h Trading Volume:</span>
-                  <span className="text-amber-400 font-bold">${dailyVolumeUsd.toLocaleString()} USD</span>
+                  <span className="text-amber-400 font-bold">${(isNaN(dailyVolumeUsd) ? 0 : dailyVolumeUsd).toLocaleString('en-US')} USD</span>
                 </div>
                 <input
                   type="range"
@@ -147,7 +147,7 @@ export const TokenomicsBuyback: React.FC = () => {
               <div className="p-4 rounded-xl bg-slate-950 border border-slate-800">
                 <p className="text-[11px] text-slate-400">Daily Buyback Budget (USD):</p>
                 <p className="text-2xl font-black text-amber-400 mt-0.5">
-                  ${calculatedDailyFeeUsd.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+                  ${(isNaN(calculatedDailyFeeUsd) ? 0 : calculatedDailyFeeUsd).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
                 </p>
                 <p className="text-xs text-slate-500 mt-1">
                   ≈ {calculatedDailyFeeSol.toFixed(2)} SOL bought back daily from Raydium / pump.fun
@@ -157,7 +157,7 @@ export const TokenomicsBuyback: React.FC = () => {
               <div className="p-4 rounded-xl bg-slate-950 border border-slate-800">
                 <p className="text-[11px] text-slate-400">Monthly Market Buyback Pressure:</p>
                 <p className="text-2xl font-black text-emerald-400 mt-0.5">
-                  ${monthlyBuybackUsd.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+                  ${(isNaN(monthlyBuybackUsd) ? 0 : monthlyBuybackUsd).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
                 </p>
                 <p className="text-xs text-slate-500 mt-1">
                   Accumulated price floor support over 30 days

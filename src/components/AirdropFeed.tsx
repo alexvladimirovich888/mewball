@@ -45,6 +45,12 @@ export const AirdropFeed: React.FC<AirdropFeedProps> = ({ distributorWallet, tok
     }
   };
 
+  const formatAmount = (val: any): string => {
+    const num = typeof val === "number" ? val : parseFloat(String(val || 0));
+    if (isNaN(num) || !isFinite(num)) return "0";
+    return Math.round(num).toLocaleString("en-US");
+  };
+
   return (
     <div className="py-2 px-1 flex flex-col h-full min-h-0 gap-3">
       
@@ -123,7 +129,7 @@ export const AirdropFeed: React.FC<AirdropFeedProps> = ({ distributorWallet, tok
 
                 <div className="text-right shrink-0">
                   <p className="font-bold text-neon-gradient">
-                    +{(tx?.amount ?? 0).toLocaleString()} $CATBALL
+                    +{formatAmount(tx?.amount)} $CATBALL
                   </p>
                   <a
                     href={tx?.solscanTx || "#"}

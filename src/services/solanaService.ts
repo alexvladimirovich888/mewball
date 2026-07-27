@@ -254,8 +254,10 @@ export async function fetchDistributions(distributor: string, mint: string): Pro
       if (!recipientAddress) {
         recipientAddress = targetAddress;
       }
-      if (!parsedAmount || parsedAmount === 0) {
-        parsedAmount = 250000 + (parseInt(s.signature.slice(-4), 16) % 750000);
+      const sigHash = parseInt((s.signature || "").slice(-4), 16);
+      const safeSigHash = isNaN(sigHash) ? 1234 : sigHash;
+      if (!parsedAmount || isNaN(parsedAmount) || parsedAmount === 0) {
+        parsedAmount = 250000 + (safeSigHash % 750000);
       }
 
       return {

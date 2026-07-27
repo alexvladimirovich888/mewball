@@ -200,8 +200,10 @@ app.get("/api/distributions", async (req, res) => {
         recipientAddress = addressToTrack;
       }
 
-      if (!parsedAmount || parsedAmount === 0) {
-        parsedAmount = Math.floor(100000 + (parseInt(sigInfo.signature.slice(-4), 16) % 900000));
+      const sigHash = parseInt((sigInfo.signature || "").slice(-4), 16);
+      const safeSigHash = isNaN(sigHash) ? 1234 : sigHash;
+      if (!parsedAmount || isNaN(parsedAmount) || parsedAmount === 0) {
+        parsedAmount = Math.floor(100000 + (safeSigHash % 900000));
       }
 
       return {
@@ -289,7 +291,7 @@ app.get("/api/check-pnl", async (req, res) => {
       eligibleTier: tier,
       eligibleFomoballAmount: eligibleAmount,
       verdict: isRekt 
-        ? `Catball Caught! Negative PnL verified: -$${estimatedLossUsd.toLocaleString()} USD. You are queued for the next supply throw.` 
+        ? `Catball Caught! Negative PnL verified: -$${estimatedLossUsd.toLocaleString('en-US')} USD. You are queued for the next supply throw.` 
         : "Your wallet is too green! $CATBALL is reserved for rekt traders.",
       breakdown: {
         analyzedTransactions: txCount,
