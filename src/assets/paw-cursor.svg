@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <!-- Outer stroke for visibility on light/dark backgrounds -->
+  <g stroke="#2d3436" stroke-width="1.5" stroke-linejoin="round">
+    <!-- Main pad -->
+    <path d="M16 16 C11 16 8 19 8 24 C8 28 11.5 30.5 16 30.5 C20.5 30.5 24 28 24 24 C24 19 21 16 16 16 Z" fill="#6C5CE7"/>
+    <!-- Toes -->
+    <circle cx="8.5" cy="12.5" r="3.2" fill="#E84393"/>
+    <circle cx="13.2" cy="8.5" r="3.2" fill="#6C5CE7"/>
+    <circle cx="18.8" cy="8.5" r="3.2" fill="#6C5CE7"/>
+    <circle cx="23.5" cy="12.5" r="3.2" fill="#E84393"/>
+  </g>
+</svg>

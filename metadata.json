@@ -1,0 +1,7 @@
+{
+  "name": "CATBALL",
+  "description": "Rolling the Catball to Rekt Traders on Solana. Turning Losses into $CATBALL.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
